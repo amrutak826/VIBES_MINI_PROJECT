@@ -1,0 +1,77 @@
+{
+  "name": "MovieRecommendation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Movie title"
+    },
+    "genre": {
+      "type": "string",
+      "enum": [
+        "action",
+        "comedy",
+        "drama",
+        "romance",
+        "horror",
+        "sci-fi",
+        "thriller",
+        "documentary",
+        "animation",
+        "fantasy"
+      ],
+      "description": "Genre of the movie"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "happy",
+        "sad",
+        "relaxed",
+        "excited",
+        "thoughtful",
+        "nostalgic"
+      ],
+      "description": "Mood of the movie"
+    },
+    "year": {
+      "type": "number",
+      "description": "Release year"
+    },
+    "director": {
+      "type": "string",
+      "description": "Movie director"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL to movie poster image"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief movie description"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "netflix",
+          "prime",
+          "hotstar",
+          "zee5",
+          "apple"
+        ]
+      },
+      "description": "Streaming platforms where this movie is available"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Movie rating from 1-10"
+    }
+  },
+  "required": [
+    "title",
+    "genre",
+    "mood"
+  ]
+}

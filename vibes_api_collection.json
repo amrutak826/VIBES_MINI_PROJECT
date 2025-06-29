@@ -1,0 +1,48 @@
+{
+  "info": {
+    "_postman_id": "vibes-postman-collection",
+    "name": "VIBES API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Popular Movies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/movies/popular", "host": ["localhost"], "port": "5000", "path": ["movies", "popular"] }
+      }
+    },
+    {
+      "name": "Get Music Recommendations",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{
+  "mood": "happy",
+  "genre": "pop"
+}"
+        },
+        "url": { "raw": "http://localhost:5000/music/recommend", "host": ["localhost"], "port": "5000", "path": ["music", "recommend"] }
+      }
+    },
+    {
+      "name": "Get Food Recommendations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/food/recommend", "host": ["localhost"], "port": "5000", "path": ["food", "recommend"] }
+      }
+    },
+    {
+      "name": "Compare Food Prices",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:5000/food/compare/Pizza", "host": ["localhost"], "port": "5000", "path": ["food", "compare", "Pizza"] }
+      }
+    }
+  ]
+}

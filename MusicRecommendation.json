@@ -1,0 +1,74 @@
+{
+  "name": "MusicRecommendation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Song title"
+    },
+    "artist": {
+      "type": "string",
+      "description": "Song artist"
+    },
+    "genre": {
+      "type": "string",
+      "enum": [
+        "pop",
+        "rock",
+        "hip-hop",
+        "electronic",
+        "jazz",
+        "classical",
+        "r&b",
+        "indie",
+        "metal",
+        "folk"
+      ],
+      "description": "Genre of the song"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "happy",
+        "sad",
+        "relaxed",
+        "energetic",
+        "focused",
+        "romantic"
+      ],
+      "description": "Mood of the song"
+    },
+    "year": {
+      "type": "number",
+      "description": "Release year"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL to album/single cover image"
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "spotify",
+          "apple",
+          "youtube",
+          "amazon",
+          "gaana"
+        ]
+      },
+      "description": "Music platforms where this song is available"
+    },
+    "bpm": {
+      "type": "number",
+      "description": "Beats per minute (tempo)"
+    }
+  },
+  "required": [
+    "title",
+    "artist",
+    "mood",
+    "genre"
+  ]
+}
